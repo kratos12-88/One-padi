@@ -1,6 +1,6 @@
 # OnePadi
 
-Ten existing Nigerian web apps compiled into one ecosystem. The home directory offers search, category filters, saved quick access, and a combined record overview. Each app remains a complete, individually branded product at `/apps/<id>/` with an ecosystem switcher. No iframe or outbound handoff is required.
+Ten existing Nigerian web apps compiled into one ecosystem. The home directory offers search, category filters, saved quick access, and a combined record overview. Settings includes a practical guide to all ten tools, quick access and display preferences, workspace status, and an export of all available records. Each app remains a complete, individually branded product at `/apps/<id>/` with an ecosystem switcher. No iframe or outbound handoff is required.
 
 ## Products
 
@@ -23,7 +23,7 @@ npm test
 
 Create one Vercel project from this repository with Framework: Other, Build Command: `npm run build`, Output Directory: `dist`. The root Vercel function at `api/records.js` dispatches product records.
 
-For persistent cloud records, set `SESSION_SECRET` to a new random value of at least 32 bytes and set `KV_REST_API_URL` and `KV_REST_API_TOKEN` to your Redis REST storage. Keep secrets out of git. With no cloud storage, the UI falls back to browser-local demo records. The home overview reads server records when available and otherwise reads the product's browser-local demo records. The source apps use the same session cookie name; do not mount unrelated apps under this domain.
+For persistent cloud records, set `SESSION_SECRET` to a new random value of at least 32 bytes and set `KV_REST_API_URL` and `KV_REST_API_TOKEN` to your Redis REST storage. Keep secrets out of git. With no cloud storage, the UI falls back to browser-local demo records. The home overview includes server and browser-demo records where each is available. The source apps use the same session cookie name; do not mount unrelated apps under this domain.
 
 ## Scope
 
